@@ -9,7 +9,7 @@ public class Control{
     View view;
     Reader reader = new Reader();
     int option;
-    String file_dictionary, file_to_read, original, translated;
+    String file_dictionary, file_to_read, original, translated, message;
     
     while(!finished){
       view = new View();
@@ -68,11 +68,24 @@ public class Control{
     while(!finished){
       view = new View();
       view.menu("original");
-      original = view.stringInput();
+      original = view.stringInput().toLowerCase();
       //elegir el tipo de lenguaje original que ingresará
       view.menu("translated");
-      translated = view.stringInput();
+      translated = view.stringInput().toLowerCase();
       //elegir el tipo de lenguaje al que se va a traducir
+      view.menu("message");
+      message = view.stringInput().toLowerCase();   
+      //ingresar el mensaje que se desea traducir
+      
+      view.menu("continue");
+      message = view.stringInput().toLowerCase();
+      if(message.equals("y")){
+        finished = false;
+      }
+      else{
+        view.exit();
+        System.exit(0);
+      }
     }
   }
 }

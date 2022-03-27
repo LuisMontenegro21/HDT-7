@@ -46,6 +46,12 @@ public class View{
     else if(command == "welcome"){
       System.out.println("Bienvenido: \n" + "¿Qué desea hacer? \n" + "1 ingresar diccionario\n2 salir");
     }
+    else if(command == "message"){
+      System.out.println("Ingrese el mensaje a traducir: ");
+    }
+    else if(command == "continue"){
+      System.out.println("¿Desea continuar? \ny/n");
+    }
 
   }
   public void exit(){
