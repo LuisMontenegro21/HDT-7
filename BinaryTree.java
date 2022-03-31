@@ -89,10 +89,7 @@ public class BinaryTree<E>
 	}
 
 	public boolean isEmpty () {
-		if (this.val == null) {
-			return true;
-		}
-		return false;
+		return this.val == null;
 	}
 	
 }
