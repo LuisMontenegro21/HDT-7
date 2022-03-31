@@ -36,17 +36,16 @@ public class View{
     }
 
     else if(command == "original"){
-      System.out.println("Seleccione el idioma que desea seleccionar: " + "1 inglés \n2 español \n3 francés");
+      System.out.println("Seleccione el idioma que desea seleccionar: " + "\n1 inglés \n2 español \n3 francés");
     }
     
     else if(command == "translated"){
-      System.out.println("Seleccione el idioma al que desea traducir: " + "1 inglés \n2 español \n3 francés");
+      System.out.println("Seleccione el idioma al que desea traducir: " + "\n1 inglés \n2 español \n3 francés");
     }
 
     else if(command == "welcome"){
-      System.out.println("Bienvenido: \n" + "¿Qué desea hacer? \n" + "1 ingresar diccionario\n2 salir");
+      System.out.println("Bienvenido: \n" + "¿Qué desea hacer?" + "\n1 ingresar diccionario\n2 salir");
     }
-
     else if(command == "continue"){
       System.out.println("¿Desea continuar? \ny/n");
     }

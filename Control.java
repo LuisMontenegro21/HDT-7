@@ -56,7 +56,9 @@ public class Control{
       }
       if(exists == true){
         reader.readFile(file_to_read);
+        //reader.readText(file_to_read);
         finished = true;
+        //TODO que haga lo que quiero csm
       }
       else{
         finished = false;
@@ -73,10 +75,8 @@ public class Control{
       view.menu("translated");
       translated = view.stringInput().toLowerCase();
       //elegir el tipo de lenguaje al que se va a traducir
-      
       view.exit();
       System.exit(0);
-      
     }
   }
 }
