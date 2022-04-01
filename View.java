@@ -30,17 +30,21 @@ public class View{
     if(command == "file_dictionary"){
       System.out.println("Ingrese el directorio (path) del diccionario: ");
     }
+
+    else if(command == "key"){
+      System.out.println("Ingrese el idioma clave: ");
+    }
     
     else if(command == "file_to_read"){
       System.out.println("Ingrese el directorio (path) del archivo a traducir: ");
     }
 
     else if(command == "original"){
-      System.out.println("Seleccione el idioma que desea seleccionar: " + "\n1 inglés \n2 español \n3 francés");
+      System.out.println("Seleccione el idioma que desea seleccionar: " + "\n- english \n- spanish \n- french");
     }
     
     else if(command == "translated"){
-      System.out.println("Seleccione el idioma al que desea traducir: " + "\n1 inglés \n2 español \n3 francés");
+      System.out.println("Seleccione el idioma al que desea traducir: " + "\n- english \n- spanish \n- french");
     }
 
     else if(command == "welcome"){
@@ -51,6 +55,11 @@ public class View{
     }
 
   }
+
+  public void errorInput(){
+    System.out.println("Ingrese una opción permitida");
+  }
+
   public void exit(){
     System.out.println("Gracias por usar el traductor");
   }
