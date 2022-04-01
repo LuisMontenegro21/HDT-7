@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.Scanner;
 import java.util.List;
 import java.util.LinkedList;
+import java.util.Arrays;
 
 
 public class Reader {
@@ -11,33 +12,34 @@ public class Reader {
 
     private File file;
     private Scanner scan;
-    private List<String> list;
+    private List<String[]> list, translatedList;
     private String line;
-    private String[] word;
+    private String[] word, word2;
 
     /**
      * Metodo que lee e imprime el contenido del archivo
      * @param file_to_read 
      */
-    public void readFile(String file_to_read){
-            list = new LinkedList<String>();
+    public List<String[]> readFile(String file_to_read){
+            list = new LinkedList<String[]>();
             file = new File(file_to_read);
             try {
                 scan = new Scanner(file); 
                 while(scan.hasNextLine()){
                     line = scan.nextLine();
-                    list.add(line);
-                    System.out.println(line);
-                    //TODO que devuelva los datos para asociarlos 
+                    word = line.split(" ");
+                    list.add(word);
                 }
-                for(String i : list){
-                    System.out.println(i);
-                }
-                
-            } catch (IOException e) {
-                System.out.println("El archivo no existe");
+            for(String[] a: list){
+                System.out.println(Arrays.deepToString(a));
             }
-         
+            return list;
+                
+            } 
+            catch (IOException e) {
+                System.out.println("El archivo no existe");
+                return null;
+            }
     }
 
     /**
@@ -49,8 +51,9 @@ public class Reader {
             scan = new Scanner(new File(text));
             while(scan.hasNextLine()){
                 line = scan.nextLine();
-                word = line.split("");
-                for(String i : word){
+                word2 = line.split("");
+                translatedList.add(word2);
+                for(String i : word2){
                     System.out.println("*"+i+"*");
                 }
             }

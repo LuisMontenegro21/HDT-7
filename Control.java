@@ -9,7 +9,7 @@ public class Control{
     View view;
     Reader reader = new Reader();
     int option;
-    String file_dictionary, file_to_read, original, translated, message;
+    String file_dictionary, file_to_read, original, translated;
     
     while(!finished){
       view = new View();
@@ -55,10 +55,9 @@ public class Control{
         System.exit(0);
       }
       if(exists == true){
-        reader.readFile(file_to_read);
+        reader.print(reader.readFile(file_to_read));
         //reader.readText(file_to_read);
         finished = true;
-        //TODO que haga lo que quiero csm
       }
       else{
         finished = false;
